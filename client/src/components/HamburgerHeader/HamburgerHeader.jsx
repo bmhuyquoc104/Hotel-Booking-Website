@@ -32,6 +32,8 @@ function HamburgerHeader({ phone, address }) {
       <div className="decoration2"></div>
       <TextParagraph fw={500} color="inherit" text="Guest Reviews" />
       <div className="decoration2"></div>
+      <TextParagraph fw={500} color="inherit" text="About" />
+      <div className="decoration2"></div>
       <TextParagraph fw={500} color="inherit" text="Sign In" />
     </HamburgerHeaderStyled>
   );

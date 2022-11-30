@@ -67,11 +67,7 @@ function TextParagraph({ text, ...props }) {
   let generalPropsList = {
     ...props,
   };
-  return (
-    <StyledParagraph {...generalPropsList}>
-      {text}
-    </StyledParagraph>
-  );
+  return <StyledParagraph {...generalPropsList}>{text}</StyledParagraph>;
 }
 
 export {

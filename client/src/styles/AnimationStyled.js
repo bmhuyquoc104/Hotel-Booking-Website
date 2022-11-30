@@ -132,7 +132,7 @@ const sectionAboutAnimation = {
   },
 };
 
-const sectionProjectAnimation = {
+const SectionAnimation = {
   hidden: {
     opacity: 0,
   },
@@ -140,7 +140,7 @@ const sectionProjectAnimation = {
     opacity: 1,
     transition: {
       type: "tween",
-      duration: 3,
+      duration: 0.5,
     },
   },
 };
@@ -261,5 +261,5 @@ export {
   ScaleOutInAnimation,
   FadeInOutAnimation,
   LinearXDirection,
-  sectionProjectAnimation,
+  SectionAnimation,
 };

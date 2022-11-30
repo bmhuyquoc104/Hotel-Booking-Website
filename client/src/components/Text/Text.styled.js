@@ -13,6 +13,7 @@ const GeneralStyled = css`
   width: ${({ width }) => width || "auto"};
   letter-spacing: ${({ letterSpacing }) => letterSpacing || 0};
   line-height: ${({ lineHeight }) => lineHeight};
+  cursor: ${({ cursor }) => cursor};
 `;
 const StyledHeading1 = styled.h1`
   ${GeneralStyled}
@@ -36,6 +37,10 @@ const StyledHeading4 = styled.h3`
 `;
 const StyledParagraph = styled.p`
   ${GeneralStyled}
+  :hover {
+    color: ${({ needHover }) =>
+      needHover ? "var(--primary_color)" : ""};
+  }
 `;
 const StyledSpan = styled.span`
   ${GeneralStyled}

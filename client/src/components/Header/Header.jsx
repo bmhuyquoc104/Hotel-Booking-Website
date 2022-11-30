@@ -14,6 +14,7 @@ import { TextHeading1, TextParagraph } from "@/components/Text/Text";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import Button from "@/components/Button/Button";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Header({ address, phone, name }) {
   const [isHamburgerToggle, setIsHamburgerToggle] = useState(false);
@@ -62,34 +63,90 @@ function Header({ address, phone, name }) {
             )}
           </div>
           <div className="hamburger">
-            <div className="phone">
+            <Flex gap="0.75em">
               <BsFillTelephoneFill />
               <TextParagraph color="inherit" text={phone} />
-            </div>
-            <div className="address">
+            </Flex>
+            <Flex gap="0.75em">
               <IoLocation />
               <TextParagraph color="inherit" text={address} />
-            </div>
+            </Flex>
           </div>
           <TextHeading1
             fs="clamp(1.00rem, calc(0.87rem + 0.65vw), 1.38rem)"
             color="inherit"
             text={name}
           ></TextHeading1>
-          <Button br="4px" padding="1.15em 1.75em">
+          <Button
+            whileHover={{
+              color: "black",
+              backgroundColor: "white",
+              border: "1px solid black",
+            }}
+            border="1px solid transparent"
+            br="3px"
+            padding="1.15em 1.75em"
+          >
             <p className="book">BOOK NOW</p>
           </Button>
           <div className="decoration"></div>
           <nav>
-            <TextParagraph fw={500} color="inherit" text="Rooms" />
+            <TextParagraph
+              cursor="pointer"
+              fw={500}
+              needHover={true}
+              color="inherit"
+              text="Rooms"
+            />
             <TextParagraph fw={500} color="inherit" text="•" />
-            <TextParagraph fw={500} color="inherit" text="Facilities" />
+            <TextParagraph
+              cursor="pointer"
+              needHover={true}
+              fw={500}
+              color="inherit"
+              text="Facilities"
+            />
             <TextParagraph fw={500} color="inherit" text="•" />
-            <TextParagraph fw={500} color="inherit" text="House rules" />
+            <TextParagraph
+              cursor="pointer"
+              fw={500}
+              needHover={true}
+              color="inherit"
+              text="House rules"
+            />
             <TextParagraph fw={500} color="inherit" text="•" />
-            <TextParagraph fw={500} color="inherit" text="Guest Reviews" />
+            <TextParagraph
+              cursor="pointer"
+              needHover={true}
+              fw={500}
+              color="inherit"
+              text="Guest Reviews"
+            />
             <TextParagraph fw={500} color="inherit" text="•" />
-            <TextParagraph fw={500} color="inherit" text="Sign In" />
+            <Link
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className="scroll-link"
+              to="about"
+            >
+              <TextParagraph
+                cursor="pointer"
+                fw={500}
+                needHover={true}
+                color="inherit"
+                text="About"
+              />
+            </Link>
+
+            <TextParagraph fw={500} color="inherit" text="•" />
+            <TextParagraph
+              cursor="pointer"
+              fw={500}
+              needHover={true}
+              color="inherit"
+              text="Sign In"
+            />
           </nav>
           <AnimatePresence mode="wait">
             {isHamburgerToggle ? (

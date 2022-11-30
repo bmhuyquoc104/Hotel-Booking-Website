@@ -5,7 +5,7 @@ const HeaderStyled = styled(motion.header)`
   position: relative;
   & > :last-child {
     position: absolute;
-    top:33vh;
+    top: 33vh;
     right: 12vh;
   }
   .info {
@@ -65,7 +65,7 @@ const HeaderStyled = styled(motion.header)`
       justify-content: center;
       gap: 1em;
       text-transform: uppercase;
-      font-size: clamp(0.88rem, calc(0.73rem + 0.30vw), 1.00rem);
+      font-size: clamp(0.88rem, calc(0.73rem + 0.3vw), 1rem);
     }
     &.active,
     &:hover {

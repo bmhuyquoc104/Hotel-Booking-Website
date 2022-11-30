@@ -2,7 +2,7 @@ import React from "react";
 import Header from "@/components/Header/Header";
 import { useGetHotelInfo } from "@/hooks/useHotel";
 import Flex from "@/components/containers/Flex/Flex";
-import { TextHeading1 } from "@/components/Text/Text";
+import SectionAbout from "@/components/SectionAbout/SectionAbout";
 
 function Home() {
   const { data: HotelInfo, isLoading, isError, error } = useGetHotelInfo();
@@ -14,8 +14,13 @@ function Home() {
   }
   console.log(HotelInfo?.data);
   return (
-    <Flex minHeight="100vh" width="100%" direction="column">
-      <Header name = {HotelInfo?.data.name} phone = {HotelInfo?.data.ownerPhone} address = {HotelInfo?.data.address}/>
+    <Flex gap ="2em" minHeight="100vh" width="100%" direction="column">
+      <Header
+        name={HotelInfo?.data.name}
+        phone={HotelInfo?.data.ownerPhone}
+        address={HotelInfo?.data.address}
+      />
+      <SectionAbout/>
     </Flex>
   );
 }

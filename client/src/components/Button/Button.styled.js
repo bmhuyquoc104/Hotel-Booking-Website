@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const ButtonStyled = styled.button`
+const ButtonStyled = styled(motion.button)`
   background-color: ${({ bg }) => bg || "transparent"};
   display: flex;
   align-items: ${({ ai }) => ai || "center"};
