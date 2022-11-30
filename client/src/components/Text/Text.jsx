@@ -63,13 +63,13 @@ function TextSpan({ children, text, ...props }) {
   );
 }
 
-function TextParagraph({ text, children }) {
+function TextParagraph({ text, ...props }) {
   let generalPropsList = {
     ...props,
   };
   return (
     <StyledParagraph {...generalPropsList}>
-      {text} {children}
+      {text}
     </StyledParagraph>
   );
 }

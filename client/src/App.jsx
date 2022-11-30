@@ -4,12 +4,12 @@ import Home from "@/pages/Home";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <GlobalStyled />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

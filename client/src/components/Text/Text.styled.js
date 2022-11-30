@@ -9,9 +9,21 @@ const GeneralStyled = css`
   text-align: ${({ ta }) => ta || "left"};
   margin: ${({ m }) => m || 0};
   padding: ${({ p }) => p || 0};
+  text-transform: ${({ transform }) => transform};
+  width: ${({ width }) => width || "auto"};
+  letter-spacing: ${({ letterSpacing }) => letterSpacing || 0};
+  line-height: ${({ lineHeight }) => lineHeight};
 `;
 const StyledHeading1 = styled.h1`
   ${GeneralStyled}
+  font-family:var(--logo_font);
+  width: 20ch;
+  text-align: center;
+  line-height: 1.5rem;
+  margin-left: -15%;
+  @media (max-width: 950px) {
+    margin-left: 0em;
+  }
 `;
 const StyledHeading2 = styled.h2`
   ${GeneralStyled}
@@ -35,5 +47,5 @@ export {
   StyledHeading3,
   StyledHeading4,
   StyledParagraph,
-  StyledSpan
+  StyledSpan,
 };

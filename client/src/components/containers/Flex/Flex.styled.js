@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const FlexStyled = styled.div`
+const FlexStyled = styled(motion.div)`
   display: flex;
   flex-direction: ${({ direction }) => direction || "row"};
   justify-content: ${({ jc }) => jc || "flex-start"};
