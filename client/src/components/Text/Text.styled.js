@@ -22,6 +22,7 @@ const StyledHeading1 = styled.h1`
   text-align: center;
   line-height: 1.5rem;
   margin-left: -15%;
+  cursor:pointer;
   @media (max-width: 950px) {
     margin-left: 0em;
   }

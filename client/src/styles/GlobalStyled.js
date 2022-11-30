@@ -9,7 +9,7 @@ box-sizing:border-box;
 
 :root{
   --text_color: #000000;
-  --primary_color: #ff971d;
+  --primary_color: #e91e63;
   --text_color2:#ffffff;
   --body_bg_color:#f6f6f6;
   --header_bg_color:#ffffff;

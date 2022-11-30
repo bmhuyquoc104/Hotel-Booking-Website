@@ -6,6 +6,7 @@ import {
   StyledHeading4,
   StyledParagraph,
 } from "@/components/Text/Text.styled";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function TextHeading3({ children, text, ...props }) {
   let generalPropsList = {
@@ -35,7 +36,7 @@ function TextHeading1({ children, text, ...props }) {
     ...props,
   };
   return (
-    <StyledHeading1 {...generalPropsList}>
+    <StyledHeading1 onClick={() => scroll.scrollToTop()} {...generalPropsList}>
       {text} {children}
     </StyledHeading1>
   );

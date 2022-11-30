@@ -13,10 +13,12 @@ import { IoLocation } from "react-icons/io5";
 import { TextHeading1, TextParagraph } from "@/components/Text/Text";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 import Button from "@/components/Button/Button";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function Header({ address, phone, name }) {
+  const navigate = useNavigate();
   const [isHamburgerToggle, setIsHamburgerToggle] = useState(false);
   const headerRef = useRef(null);
   const changeBackground = () => {
@@ -91,45 +93,49 @@ function Header({ address, phone, name }) {
           </Button>
           <div className="decoration"></div>
           <nav>
-            <TextParagraph
-              cursor="pointer"
-              fw={500}
-              needHover={true}
-              color="inherit"
-              text="Rooms"
-            />
+            <Link smooth={true} offset={-170} duration={500} to="rooms">
+              <TextParagraph
+                cursor="pointer"
+                fw={500}
+                needHover={true}
+                color="inherit"
+                text="Rooms"
+              />
+            </Link>
             <TextParagraph fw={500} color="inherit" text="•" />
-            <TextParagraph
-              cursor="pointer"
-              needHover={true}
-              fw={500}
-              color="inherit"
-              text="Facilities"
-            />
+            <Link smooth={true} offset={-170} duration={500} to="facilities">
+              <TextParagraph
+                cursor="pointer"
+                needHover={true}
+                fw={500}
+                color="inherit"
+                text="Facilities"
+              />
+            </Link>
+
             <TextParagraph fw={500} color="inherit" text="•" />
-            <TextParagraph
-              cursor="pointer"
-              fw={500}
-              needHover={true}
-              color="inherit"
-              text="House rules"
-            />
+            <Link smooth={true} offset={-170} duration={500} to="rules">
+              <TextParagraph
+                cursor="pointer"
+                fw={500}
+                needHover={true}
+                color="inherit"
+                text="House rules"
+              />
+            </Link>
             <TextParagraph fw={500} color="inherit" text="•" />
-            <TextParagraph
-              cursor="pointer"
-              needHover={true}
-              fw={500}
-              color="inherit"
-              text="Guest Reviews"
-            />
+            <Link smooth={true} offset={-170} duration={500} to="reviews">
+              <TextParagraph
+                cursor="pointer"
+                needHover={true}
+                fw={500}
+                color="inherit"
+                text="Guest Reviews"
+              />
+            </Link>
+
             <TextParagraph fw={500} color="inherit" text="•" />
-            <Link
-              smooth={true}
-              offset={-50}
-              duration={500}
-              className="scroll-link"
-              to="about"
-            >
+            <Link smooth={true} offset={-170} duration={500} to="about">
               <TextParagraph
                 cursor="pointer"
                 fw={500}
@@ -138,7 +144,6 @@ function Header({ address, phone, name }) {
                 text="About"
               />
             </Link>
-
             <TextParagraph fw={500} color="inherit" text="•" />
             <TextParagraph
               cursor="pointer"
@@ -146,6 +151,7 @@ function Header({ address, phone, name }) {
               needHover={true}
               color="inherit"
               text="Sign In"
+              onClick={() => navigate("/signIn")}
             />
           </nav>
           <AnimatePresence mode="wait">

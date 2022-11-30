@@ -47,35 +47,6 @@ const listParentAnimation = {
   },
 };
 
-const homeAnimation = {
-  hidden: {
-    opacity: 0,
-  },
-  show: {
-    opacity: 1,
-    transition: {
-      delay: 1.2,
-      type: "tween",
-      duration: 0.3,
-      when: "beforeChildren",
-      staggerChildren: 0.04,
-    },
-  },
-};
-
-const LogoAnimation = {
-  hidden: {
-    opacity: 0,
-  },
-  show: {
-    opacity: 1,
-    transition: {
-      type: "easeIn",
-      duration: 1,
-    },
-  },
-};
-
 const TitleAnimation = {
   hidden: {
     opacity: 0,
@@ -86,20 +57,7 @@ const TitleAnimation = {
     x: 0,
     transition: {
       type: "tween",
-      duration:0.7
-    },
-  },
-};
-
-const SocialSectionAnimation = {
-  hidden: {
-    opacity: 0,
-  },
-  show: {
-    opacity: 1,
-    transition: {
-      type: "easeIn",
-      delay: 2.9,
+      duration: 0.7,
     },
   },
 };
@@ -112,7 +70,7 @@ const ImageAnimation = {
     opacity: 1,
     transition: {
       type: "circIn",
-      duration: 2,
+      duration: 1,
     },
   },
 };
@@ -135,9 +93,11 @@ const sectionAboutAnimation = {
 const SectionAnimation = {
   hidden: {
     opacity: 0,
+    y:50
   },
   show: {
     opacity: 1,
+    y:0,
     transition: {
       type: "tween",
       duration: 0.5,
@@ -165,22 +125,6 @@ const AbsoluteFlexContainerAnimation = {
       type: "easeOut",
       duration: 0.3,
     },
-  },
-};
-
-const heading2Animation = {
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      when: "afterChildren",
-      staggerChildren: 0.2,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    y: -25,
   },
 };
 
@@ -225,41 +169,15 @@ const FadeInOutAnimation = {
   },
 };
 
-const LinearXDirection = {
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.3,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    x: 100,
-  },
-  exit: {
-    opacity: 0,
-    x: 100,
-    transition: {
-      duration: 0.3,
-    },
-  },
-};
-
 export {
   DropDownAnimation,
   listParentAnimation,
   listChildrenAnimation,
-  LogoAnimation,
-  homeAnimation,
   TitleAnimation,
-  SocialSectionAnimation,
-  heading2Animation,
   sectionAboutAnimation,
   ImageAnimation,
   AbsoluteFlexContainerAnimation,
   ScaleOutInAnimation,
   FadeInOutAnimation,
-  LinearXDirection,
   SectionAnimation,
 };

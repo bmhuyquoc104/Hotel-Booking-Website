@@ -13,6 +13,7 @@ const HeaderStyled = styled(motion.header)`
     flex-wrap: wrap;
     display: flex;
     position: fixed;
+    z-index:2;
     align-items: center;
     color: var(--text_color2);
     top: 0;

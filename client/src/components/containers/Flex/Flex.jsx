@@ -1,9 +1,10 @@
 import React from "react";
 import FlexStyled from "@/components/containers/Flex/Flex.styled";
 
-function Flex({ variants, animate, initial, children, ...props }) {
+function Flex({ key, variants, animate, initial, children, ...props }) {
   return (
     <FlexStyled
+      key={key}
       variants={variants}
       animate={animate}
       initial={initial}
