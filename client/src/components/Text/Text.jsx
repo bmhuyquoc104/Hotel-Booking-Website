@@ -20,12 +20,12 @@ function TextHeading3({ children, text, ...props }) {
   );
 }
 
-function TextHeading2({ children, text, ...props }) {
+function TextHeading2({ onClick, children, text, ...props }) {
   let generalPropsList = {
     ...props,
   };
   return (
-    <StyledHeading2 {...generalPropsList}>
+    <StyledHeading2 onClick = {onClick} {...generalPropsList}>
       {text} {children}
     </StyledHeading2>
   );

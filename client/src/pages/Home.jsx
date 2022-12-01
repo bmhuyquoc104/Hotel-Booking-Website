@@ -16,9 +16,8 @@ function Home() {
   if (isError) {
     return <h1>{error}</h1>;
   }
-  console.log(HotelInfo?.data);
   return (
-    <Flex gap="2em" minHeight="100vh" width="100%" direction="column">
+    <Flex m ="0 0 2em 0" gap="2em" minHeight="100vh" width="100%" direction="column">
       <Header
         name={HotelInfo?.data.name}
         phone={HotelInfo?.data.ownerPhone}

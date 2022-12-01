@@ -15,6 +15,7 @@ const ButtonStyled = styled(motion.button)`
   border-bottom: ${({ borderBottom }) => borderBottom};
   border-radius: ${({ br }) => br || 0};
   color: ${({ color }) => color || "white"};
+  margin: ${({ m }) => m };
   height: ${({ height }) => height || "auto"};
   width: ${({ width }) => width || "auto"};
   gap: ${({ gap }) => gap || 0};

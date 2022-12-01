@@ -1,5 +1,5 @@
-import { useQuery } from '@tanstack/react-query'
-import { getHotelInfo } from "@/api/api";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { getHotelInfo, postHotelInfo } from "@/api/api";
 
 const useGetHotelInfo = () =>
   useQuery({
@@ -7,4 +7,15 @@ const useGetHotelInfo = () =>
     queryFn: () => getHotelInfo(),
   });
 
-export { useGetHotelInfo };
+  const useAddOrder = () =>
+  useMutation({
+    mutationFn: (order) => postHotelInfo(order),
+    onError: (error) => {
+      console.log(`Error${error}`)
+    },
+    onSuccess: (data) => {
+      console.log(data)
+    },
+  })
+
+export { useGetHotelInfo, useAddOrder };

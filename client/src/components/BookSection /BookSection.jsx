@@ -11,7 +11,6 @@ function BookSection() {
   const [isToggleArrow, setIsToggleArrowDown] = useState(false);
   const [changeAdultQuantity, setChangeAdultQuantity] = useState(1);
   const [changeChildrenQuantity, setChangeChildrenQuantity] = useState(1);
-  console.log(changeChildrenQuantity);
   return (
     <BookSectionStyled
       whileInView="show"

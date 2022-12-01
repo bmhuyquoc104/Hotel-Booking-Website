@@ -6,4 +6,6 @@ const api = axios.create({
 
 const getHotelInfo = () => api.get("/").then((res) => res.data);
 
-export { getHotelInfo };
+const postHotelInfo = (hotel) => api.post("/", hotel).then((res) => res.data);
+
+export { getHotelInfo, postHotelInfo };

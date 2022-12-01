@@ -18,7 +18,10 @@ const HeaderStyled = styled(motion.header)`
     color: var(--text_color2);
     top: 0;
     justify-content: space-between;
+    .book {
+      padding:1.15em 1.75em;
 
+    }
     & > button {
       color: var(--text_color);
       background-color: #ffffff;
@@ -102,6 +105,8 @@ const HeaderStyled = styled(motion.header)`
         width: 5.75ch;
         white-space: nowrap;
         overflow: hidden;
+        padding:0;
+
         text-align: center;
       }
       .decoration {

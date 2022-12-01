@@ -15,11 +15,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import Button from "@/components/Button/Button";
+import { AbsoluteFlexContainer } from "../containers/Flex/AbsoluteFlexContainer";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function Header({ address, phone, name }) {
   const navigate = useNavigate();
   const [isHamburgerToggle, setIsHamburgerToggle] = useState(false);
+  const [toggleMap, setToggleMap] = useState(false);
   const headerRef = useRef(null);
   const changeBackground = () => {
     if (window.scrollY >= 100) {
@@ -40,6 +42,34 @@ function Header({ address, phone, name }) {
   }, [isHamburgerToggle]);
   return (
     <HeaderStyled>
+      {toggleMap ? (
+        <AbsoluteFlexContainer>
+          <Flex direction="column" gap="1em">
+            <AiOutlineClose
+              onClick={() => setToggleMap(false)}
+              style={{
+                color: "white",
+                fontSize: "1.5rem",
+                backgroundColor: "black",
+                cursor: "pointer",
+                borderRadius:"3px"
+              }}
+            />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.198599400034!2d109.2124277147515!3d12.029844438096031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31708b02a239a783%3A0x1307a2b6af9dcdf7!2sThe%20Princess%20of%20Arena%20Cam%20Ranh%20Home!5e0!3m2!1sen!2s!4v1669921134707!5m2!1sen!2s"
+              width="600"
+              height="450"
+              loading="lazy"
+              frameBorder="0"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </Flex>
+        </AbsoluteFlexContainer>
+      ) : null}
+
       <>
         <ImageContainer width="100%">
           <picture>
@@ -69,9 +99,9 @@ function Header({ address, phone, name }) {
               <BsFillTelephoneFill />
               <TextParagraph color="inherit" text={phone} />
             </Flex>
-            <Flex gap="0.75em">
+            <Flex onClick={() => setToggleMap(true)} gap="0.75em">
               <IoLocation />
-              <TextParagraph color="inherit" text={address} />
+              <TextParagraph lineHeight="1.5" color="inherit" text={address} />
             </Flex>
           </div>
           <TextHeading1
@@ -87,7 +117,6 @@ function Header({ address, phone, name }) {
             }}
             border="1px solid transparent"
             br="3px"
-            padding="1.15em 1.75em"
           >
             <Link smooth={true} offset={-170} duration={500} to="book">
               <p className="book">BOOK NOW</p>
@@ -127,17 +156,6 @@ function Header({ address, phone, name }) {
               />
             </Link>
             <TextParagraph fw={500} color="inherit" text="•" />
-            <Link smooth={true} offset={-170} duration={500} to="reviews">
-              <TextParagraph
-                cursor="pointer"
-                needHover={true}
-                fw={500}
-                color="inherit"
-                text="Guest Reviews"
-              />
-            </Link>
-
-            <TextParagraph fw={500} color="inherit" text="•" />
             <Link smooth={true} offset={-170} duration={500} to="about">
               <TextParagraph
                 cursor="pointer"
@@ -154,12 +172,13 @@ function Header({ address, phone, name }) {
               needHover={true}
               color="inherit"
               text="Sign In"
-              onClick={() => navigate("/signIn")}
+              onClick={() => navigate("/admin")}
             />
           </nav>
           <AnimatePresence mode="wait">
             {isHamburgerToggle ? (
               <HamburgerHeader
+                setIsHamburgerToggle={setIsHamburgerToggle}
                 phone={phone}
                 address={address}
               ></HamburgerHeader>

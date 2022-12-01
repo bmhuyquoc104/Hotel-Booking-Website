@@ -1,0 +1,187 @@
+{
+  "data": {
+    "name": "The princess of Arena Cam Ranh Home",
+    "address": "Toà Sea - Khu nghỉ The Arena, Miếu Ông, Vietnam",
+    "coordination": {
+      "lat": 12.0298444,
+      "lng": 109.2124277
+    },
+    "thumbnail_url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/397680322.jpg?k=91bf91ead94a551aac97e80652e739f38a9b95326b79adb1ef4132c3cc01e8e2&o=&hp=1",
+    "owner_name": "Thanh Nguyen",
+    "ownerEmail": "thanhnguyen@arena.com",
+    "ownerPhone": "0903358623",
+    "roomsList": [
+      {
+        "id": 1,
+        "amenities": [
+          "Breakfast",
+          "QUEEN SIZE BED",
+          "Balcony",
+          "BATH",
+          "Shower"
+        ],
+        "image": "https://lh3.googleusercontent.com/Jd6NCT4kSfDrkomFXr0zuFr7bHbnsEPLJAL8m-fcKglrUyP9-7baZsNDA5ZCUDJ9qi2CKqVZ8MqYeUqeB5EGUfCq9pF7N8Nku8RE20DRm2HgtrHIYZUyPIzObsrnECiYFAv_N-lPHRdMBhpCjaZC64-IKMrho0a5cN1OQfsbPMRumgIKQiLMiuYZPMZZnTP_DuGciMH5nRVnt2UNACPvGS4OkJrO22SSws3V8jiaupwS6nq6vvlNayOmyTNbgVwkzaEE59AI2mFDHR3LWXgpAZvXHaFwugR0fG7NY702k3k-BlNXX2-o6Lb7404uaSVQKxv5XAXIwtzNBIqRfJS4W97kRxl1r-NVZ-cOZSlXLDifjMvhuEqyMPwH4qEuvs3AtlNS4HgGKfkM-7iZpE3Yl0ggOwQsuomM36gF-a00DrPCd9Yvgz4MdHp8StUQZDwA6vrMSA8zEvVRG0necYMiVVrtrHqe6NTPkZeYoccpQzGZNK_b5Skmi39A8oCOhAkJ8fVFRK-VZIiaenjG8U8jI_9lLoZ55htke5bF9zn-VffyXj0AX05zaSBefcp9sm9CGp3sEo37uCQQ0FjVEXKR_FL4slxtRoXw2QH070DMm5uWnFstOoyOGdHsW3Dm4Lj_sfvttH3okA93YkUMXHsXJvCEZEnD9zu7czU6JIg-94W_HcbFoTfD2ArAEpuULMPqL5oGUALxOJYAHkIXvQmbvl1Im_sIlg3rko_tGSRR2ie8ASTYApeNEP74yYtrHLsV7rVzyzVwuMaqAuADKn5mDaHr4Bu6o45klBSwRGgJmdmvkjbvXh7Me1kj0KxV-28Ept6raklefh4V_1HaPwSp676wn1FamRs3wxz7LAJwxlu5o6efcbvvsiRsuNhd7xjSQOrThwR-tHr6oy1Bzk01fwbWXehJbXJryjCSzuR1K4R3v-EdKNF25aHpy9QLZHQxaLLU6bWfxp_5kKAArhm9I-V2600MnvXu1bL7sw8G-AZjrlCFBHKprRgY-uMwwBhS-2ofyEIjR0v4BPXfO0B1_-UnJpOI0JcYyCqNquk8kSGaZt3qNUeYsFDOtpffcfEWGZ2iM11J2S59yVxzOx4cui0LuV0y6Q=w791-h519-no?authuser=0",
+        "name": "single",
+        "size": 50,
+        "rate": 50,
+        "overview": "Our Single Rooms, which has crescent-shaped building with a classic South African flair, have their own private terrace, and a spacious and airly balcony balcony. Select a comfortable queen-size bed. The perfect spot to relax is in your en suite bathroom, which features an oval bath, and an energizing rain shower.This room is an amazing option for you and your child to enjoy on vacation. 24 Hours room service also included.",
+        "numberRooms": 20
+      },
+      {
+        "id": 2,
+        "amenities": [
+          "TV",
+          "Breakfast",
+          "KING SIZE BED",
+          "balcony",
+          "shower",
+          "bath",
+          "cable"
+        ],
+        "image": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/397679942.jpg?k=7b3f5dd6c2f195e3129f361ecb989adf25331fe20ec52954beb2b0c83cf01b89&o=&hp=1",
+        "name": "double",
+        "overview": "With either a king-size bed or two queen-size beds, enjoy your large bedroom during your luxury hotel stay in Cam Ranh. The luxurious features include two marble vanities, a rain shower, a flat-screen TV, a spacious and airly balcony,  and a beautiful egg-shaped bath.  Families and groups can build their own spacious hideaway and spend time together with the option of connecting hotel rooms. 24 Hours room service also included.",
+        "numberRooms": 20,
+        "size": 72,
+        "rate": 75,
+        "numberRooms": 10
+      },
+      {
+        "id": 3,
+        "image": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/397680327.jpg?k=8a794b7145d9554f3d2d1e07385ccb888042f57e8ed37df162bcadcf3fb5987f&o=&hp=1",
+        "amenities": [
+          "TV",
+          "Breakfast",
+          "KING SIZE BED",
+          "balcony",
+          "shower",
+          "bath",
+          "kitchen"
+        ],
+        "name": "family",
+        "size": 140,
+        "rate": 150,
+        "numberRooms": 5,
+        "overview": "Our extraordinary Family Room, located on the fourth and fifth floors of the Princess of Arena Home, will charm your loved ones. There are two bedrooms that flank the roomy living space, each with a sizable balcony.  The king-size bed is the star of the master bedroom, which also has an expansive bath, two soothing rain showers, marble vanities, and a separate bathroom. With two queen-size beds and an en suite bathroom with twin marble vanities, a freestanding tub, and a rain shower, the second bedroom is the epitome of comfort. There is one spacious kitchen that equipped all necessary appliances."
+      },
+      {
+        "id": 4,
+        "image": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/397679992.jpg?k=26ab0eec59f1aa4acf25856b370969b6a2400f56368661f5b901392d65b99247&o=&hp=1",
+        "amenities": [
+          "TV",
+          "Breakfast",
+          "KING SIZE BED",
+          "balcony",
+          "shower",
+          "bath",
+          "swimming pool"
+        ],
+        "overview": "Choose between a king-size or two queen-size beds before entering the en suite bathroom through the roomy dressing area. Your spacious, oval bath is the central focus of this room, and it is surrounded by two marble vanities and a traditional rain shower. Sunlight flows through floor-to-ceiling balcony doors as you relax on your furnished private terrace overlooking the beach. Swimming pool is at the front. If you want to spend your time with family and friends in absolute comfort.",
+        "name": "sea-view",
+        "size": 98,
+        "rate": 120,
+        "numberRooms": 3
+      }
+    ],
+    "rules": [
+      {
+        "type": "Check-in",
+        "description": "14.00am - 22.00pm"
+      },
+      {
+        "type": "Check-out",
+        "description": "08.00am - 12.00am"
+      },
+      {
+        "type": "Cancellation/prepayment",
+        "description": "Cancellation and prepayment policies vary according to apartment type. Please check the apartment conditions when selecting your apartment above."
+      },
+      {
+        "type": "Children",
+        "description": "Children of any age are welcome.Children aged 18 years and above are considered adults at this property.To see correct prices and occupancy information, please add the number of children in your group and their ages to your search."
+      },
+      {
+        "type": "Beds",
+        "description": "No cots or extra beds are available."
+      },
+      {
+        "type": "No age restriction",
+        "description": "There is no age requirement for check-in"
+      },
+      {
+        "type": "Cash only",
+        "description": "This property only accepts cash payments."
+      },
+      {
+        "type": "Smoking",
+        "description": "Smoking is not allowed."
+      },
+      {
+        "type": "Parties",
+        "description": "Parties/events are not allowed."
+      },
+      {
+        "type": "Pets",
+        "description": "Pets are not allowed."
+      }
+    ],
+    "check-in": "14:00 - 22:00",
+    "check-out": "8:00 - 12:00",
+    "utilities": [
+      {
+        "type": "Bathroom",
+        "features": ["Private bathroom"]
+      },
+      {
+        "type": "Outdoor & View",
+        "features": ["View", "Restaurants", "Gym"]
+      },
+      {
+        "type": "Swimming Pool",
+        "features": ["Pool"]
+      },
+      {
+        "type": "Outdoors",
+        "features": ["Balcony", "Terrace", "Garden", "Beach"]
+      },
+      {
+        "type": "Kitchen",
+        "features": ["Kitchen"]
+      },
+      {
+        "type": "Internet",
+        "features": ["No internet access available."]
+      },
+      {
+        "type": "Media & Technology",
+        "features": ["Flat-screen TV"]
+      },
+      {
+        "type": "Languages spoken",
+        "features": ["English", "Vietnamese"]
+      },
+      {
+        "type": "Miscellaneous",
+        "features": [
+          "Air conditioning",
+          "Non-smoking throughout",
+          "Non-smoking rooms"
+        ]
+      },
+      {
+        "type": "Parking",
+        "features": ["Parking"]
+      }
+    ],
+    "photos": [
+      "https://cf.bstatic.com/xdata/images/hotel/max500/397679476.jpg?k=6a33e395927c765e4a0c24f0144fc5f82d25094c84e118b8d820eed0140058e2&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max500/397679942.jpg?k=7b3f5dd6c2f195e3129f361ecb989adf25331fe20ec52954beb2b0c83cf01b89&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/397679601.jpg?k=8d420d6fcd15cae1e327c759b8aa44e7a893f66db176e53983c3a6f83845d82c&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max300/397680317.jpg?k=9bad7b5cd71f3fbc26272d3e3e60c27b350ba7070aa21b5a02ee06be0ace0a5a&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max300/389311611.jpg?k=d854dfe59ad8b79ffdb7f7cfa7d9f10c4c56fbbd0c41423d535aefed9fe8fcdc&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max300/389311615.jpg?k=d183dc615276047bfdb7b87da268dca91789649cae01b9f9e1f24a12c31fcf54&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max300/397680326.jpg?k=d5d994117787993cf4c3f046a9cfaa022fc9bd92746fb6120973b54a7b46b10d&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max300/397680327.jpg?k=8a794b7145d9554f3d2d1e07385ccb888042f57e8ed37df162bcadcf3fb5987f&o=&hp=1"
+    ]
+  }
+}

@@ -14,7 +14,7 @@ box-sizing:border-box;
   --body_bg_color:#f5f5f5;
   --header_bg_color:#ffffff;
   --book_button_bg_color:#1a1a1a;
-  --check_availability_button_bg_color:#9d9d9d
+  --check_availability_button_bg_color:#9d9d9d;
   --check_in_bg_color:#ffffff;
   --logo_font :'Pacifico', cursive;
 }

@@ -14,5 +14,8 @@ const FlexStyled = styled(motion.div)`
   width: ${({ width }) => width || "auto"};
   background-color: ${({ bg }) => bg};
   border-radius: ${({ br }) => br || 0};
+  overflow-y: scroll;
+  height:${({ height }) => height || "auto"};
+  cursor:${({cursor }) => cursor}
 `;
 export default FlexStyled;
