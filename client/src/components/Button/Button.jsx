@@ -1,9 +1,14 @@
 import React from "react";
 import ButtonStyled from "@/components/Button/Button.styled";
 
-function Button({ children, whileHover, ...props }) {
+function Button({ disabled, type, children, whileHover, ...props }) {
   return (
-    <ButtonStyled whileHover={whileHover} {...props}>
+    <ButtonStyled
+      disabled={disabled}
+      type={type}
+      whileHover={whileHover}
+      {...props}
+    >
       {children}
     </ButtonStyled>
   );

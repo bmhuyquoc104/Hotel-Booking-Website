@@ -11,7 +11,7 @@ box-sizing:border-box;
   --text_color: #000000;
   --primary_color: #e91e63;
   --text_color2:#ffffff;
-  --body_bg_color:#f6f6f6;
+  --body_bg_color:#f5f5f5;
   --header_bg_color:#ffffff;
   --book_button_bg_color:#1a1a1a;
   --check_availability_button_bg_color:#9d9d9d

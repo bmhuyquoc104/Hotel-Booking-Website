@@ -89,8 +89,11 @@ function Header({ address, phone, name }) {
             br="3px"
             padding="1.15em 1.75em"
           >
-            <p className="book">BOOK NOW</p>
+            <Link smooth={true} offset={-170} duration={500} to="book">
+              <p className="book">BOOK NOW</p>
+            </Link>
           </Button>
+
           <div className="decoration"></div>
           <nav>
             <Link smooth={true} offset={-170} duration={500} to="rooms">

@@ -9,14 +9,17 @@ const ButtonStyled = styled(motion.button)`
   cursor: pointer;
   outline: none;
   font-weight: ${({ fw }) => fw};
+  font-size: ${({ fs }) => fs};
   padding: ${({ padding }) => padding || 0};
   border: ${({ border }) => border || "none"};
+  border-bottom: ${({ borderBottom }) => borderBottom};
   border-radius: ${({ br }) => br || 0};
   color: ${({ color }) => color || "white"};
+  height: ${({ height }) => height || "auto"};
   width: ${({ width }) => width || "auto"};
   gap: ${({ gap }) => gap || 0};
   &:disabled {
-    opacity: 0.5;
+    opacity: 0.3;
     cursor: revert;
   }
   &:hover {
