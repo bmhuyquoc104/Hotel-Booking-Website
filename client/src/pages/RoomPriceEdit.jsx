@@ -5,6 +5,7 @@ import RoomPrice from "@/components/RoomPriceForm/RoomPrice";
 import { useGetHotelInfo, useGetRoomPriceInfo } from "@/hooks/useHotel";
 import { TextParagraph } from "@/components/Text/Text";
 
+
 function RoomPriceEdit() {
   const { data: HotelInfo, isLoading, isError, error } = useGetHotelInfo();
 

@@ -8,10 +8,18 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useForm, useFieldArray } from "react-hook-form";
 import RoomFieldArray from "@/components/RoomFieldArray/RoomFieldArray";
 import { usePostHotelInfo } from "@/hooks/useHotel";
-
+import Snackbar from "@mui/material/Snackbar";
 import AdminFormStyled from "./AdminForm.styled";
+
 function AdminForm({ hotelData }) {
-  const {mutate} = usePostHotelInfo();
+  const { mutate } = usePostHotelInfo();
+  const [open, setOpen] = useState(false);
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
   const formDefaultValue = {
     name: hotelData?.data.name,
     address: hotelData?.data.address,
@@ -31,8 +39,7 @@ function AdminForm({ hotelData }) {
       rate: room?.rate,
       overview: room?.overview,
       numberRooms: room?.numberRooms,
-      amenities: room.amenities.map((amenity) => (amenity)),
-
+      amenities: room.amenities.map((amenity) => amenity),
     })),
     rules: hotelData?.data?.rules.map((rule) => ({
       type: rule?.type,
@@ -40,10 +47,9 @@ function AdminForm({ hotelData }) {
     })),
     utilities: hotelData?.data?.utilities.map((utility) => ({
       type: utility.type,
-      features: utility.features.map((feature) => (feature)),
+      features: utility.features.map((feature) => feature),
     })),
   };
-
 
   const {
     register,
@@ -63,9 +69,10 @@ function AdminForm({ hotelData }) {
 
   const onSubmit = (data, e) => {
     const result = {
-      data:data
-    }
+      data: data,
+    };
     mutate(result);
+    setOpen(true);
   };
   return (
     <AdminFormStyled onSubmit={handleSubmit(onSubmit)}>
@@ -228,6 +235,12 @@ function AdminForm({ hotelData }) {
       >
         Submit
       </Button>
+      <Snackbar
+        open={open}
+        autoHideDuration={2000}
+        onClose={handleClose}
+        message="You have successfully edited the hotel info"
+      />
     </AdminFormStyled>
   );
 }

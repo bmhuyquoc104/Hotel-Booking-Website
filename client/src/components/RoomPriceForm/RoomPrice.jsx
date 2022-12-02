@@ -6,10 +6,17 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useForm } from "react-hook-form";
 import { usePostRoomPriceInfo } from "@/hooks/useHotel";
 import RoomPriceArray from "@/components/RoomPriceArray/RoomPriceArray";
+import Snackbar from "@mui/material/Snackbar";
 
 function RoomPrice({ roomPriceInfo }) {
   const { mutate } = usePostRoomPriceInfo();
-
+  const [open, setOpen] = useState(false);
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
   const formDefaultValue = {
     roomsList: roomPriceInfo?.map((room) => ({
       id: room?.id,
@@ -40,6 +47,7 @@ function RoomPrice({ roomPriceInfo }) {
       data: data,
     };
     mutate(result);
+    setOpen(true);
     localStorage.setItem("roomPriceInfo", JSON.stringify(result));
   };
 
@@ -63,6 +71,12 @@ function RoomPrice({ roomPriceInfo }) {
       >
         Submit
       </Button>
+      <Snackbar
+        open={open}
+        autoHideDuration={2000}
+        onClose={handleClose}
+        message="You have successfully update the price of hotel rooms"
+      />
     </RoomPriceStyled>
   );
 }

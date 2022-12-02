@@ -39,6 +39,9 @@ function Header({ address, phone, name }) {
     } else {
       document.body.style.overflow = "scroll";
     }
+    return () => {
+      window.removeEventListener("scroll", changeBackground);
+    };
   }, [isHamburgerToggle]);
   return (
     <HeaderStyled>
@@ -52,7 +55,7 @@ function Header({ address, phone, name }) {
                 fontSize: "1.5rem",
                 backgroundColor: "black",
                 cursor: "pointer",
-                borderRadius:"3px"
+                borderRadius: "3px",
               }}
             />
             <iframe
@@ -110,16 +113,11 @@ function Header({ address, phone, name }) {
             text={name}
           ></TextHeading1>
           <Button
-            whileHover={{
-              color: "black",
-              backgroundColor: "white",
-              border: "1px solid black",
-            }}
             border="1px solid transparent"
             br="3px"
-            onClick={() =>navigate("/reservations")}
+            onClick={() => navigate("/reservations")}
           >
-              <p className="book">BOOK NOW</p>
+            <p className="book">BOOK NOW</p>
           </Button>
 
           <div className="decoration"></div>

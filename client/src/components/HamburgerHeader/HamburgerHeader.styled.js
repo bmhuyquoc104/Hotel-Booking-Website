@@ -17,6 +17,9 @@ const HamburgerHeaderStyled = styled(motion.div)`
     border-top: 1px solid black;
     opacity:0.3;
   }
+  @media (min-width: 768px) {
+    display:none;
+  }
 `;
 
 export default HamburgerHeaderStyled;

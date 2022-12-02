@@ -12,6 +12,7 @@ import { useReservationContext } from "@/hooks/AppContextProvider";
 
 function BookSection({ roomPriceInfo }) {
   const { setReservation } = useReservationContext();
+
   const navigate = useNavigate();
   const roomsOption = [];
   roomPriceInfo?.roomsList?.map((room) => roomsOption.push(room.name));
@@ -95,7 +96,7 @@ function BookSection({ roomPriceInfo }) {
             <TextParagraph fs="0.875rem" text="ROOM TYPES" fw="500" />
             <select
               {...register("roomName")}
-              onChange={(e) => setRoomChosen(e.target.value)}
+              onChange={(e) => {setRoomChosen(e.target.value);setRoomQuantity(1)}}
             >
               {roomsOption?.map((room, index) => (
                 <option key={index} value={room}>
@@ -254,6 +255,7 @@ function BookSection({ roomPriceInfo }) {
             </Button>
           </Flex>
         </form>
+     
       </BookSectionStyled>
     </Flex>
   );

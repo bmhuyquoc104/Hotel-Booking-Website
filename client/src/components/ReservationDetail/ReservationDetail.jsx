@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReservationDetailStyled from "./ReservationDetail.styled";
 import { useReservationContext } from "@/hooks/AppContextProvider";
 import Label from "@/components/Label/Label";
@@ -7,9 +7,20 @@ import Button from "@/components/Button/Button";
 import { format } from "date-fns";
 import { TextHeading2, TextHeading3 } from "@/components/Text/Text";
 import Flex from "@/components/containers/Flex/Flex";
+import Snackbar from "@mui/material/Snackbar";
+import { usePostRoomPriceInfo } from "@/hooks/useHotel";
 
-function ReservationDetail() {
+function ReservationDetail({ roomPriceInfo }) {
   const { reservation } = useReservationContext();
+  const [open, setOpen] = useState(false);
+  const { mutate } = usePostRoomPriceInfo();
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
   const currencyFormatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -24,10 +35,22 @@ function ReservationDetail() {
     shouldFocusError: true,
   });
   const onSubmit = (data) => {
+    const newRoomPriceInfo = roomPriceInfo?.roomsList.map((room) => {
+      if (room.name === reservation.roomName) {
+        room.roomInStock = room.roomInStock - reservation.roomQuantity;
+      }
+      return room;
+    });
+    mutate({
+      data: {
+        roomsList: newRoomPriceInfo,
+      },
+    });
     const result = {
       ...reservation,
       ...data,
     };
+    setOpen(true);
     localStorage.setItem("reservation", JSON.stringify(result));
   };
 
@@ -212,6 +235,12 @@ function ReservationDetail() {
           CHECK OUT
         </Button>
       </form>
+      <Snackbar
+        open={open}
+        autoHideDuration={2000}
+        onClose={handleClose}
+        message="You have successfully booked a room"
+      />
     </ReservationDetailStyled>
   );
 }
