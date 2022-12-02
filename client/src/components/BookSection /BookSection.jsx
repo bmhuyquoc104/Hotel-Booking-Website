@@ -54,7 +54,6 @@ function BookSection({ roomPriceInfo }) {
       (room) => room.name === roomChosen
     );
     const totalPrice = calculatePrice(room, startDate, endDate, totalDays);
-    console.log(totalPrice);
     const values = {
       roomQuantity: roomQuantity,
       guests: {
