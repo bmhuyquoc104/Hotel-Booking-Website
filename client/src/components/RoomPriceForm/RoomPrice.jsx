@@ -14,6 +14,7 @@ function RoomPrice({ roomPriceInfo }) {
     roomsList: roomPriceInfo?.map((room) => ({
       id: room?.id,
       name: room?.name,
+      roomInStock: room?.roomInStock,
       defaultPrice: room?.defaultPrice,
       discount: room.discount.map((element) => ({
         priceDiscount: element?.priceDiscount,

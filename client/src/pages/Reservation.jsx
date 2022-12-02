@@ -1,11 +1,12 @@
 import React from "react";
 import Flex from "@/components/containers/Flex/Flex";
-import AdminHeader from "@/components/AdminHeader/AdminHeader";
-import RoomPrice from "@/components/RoomPriceForm/RoomPrice";
+import BookingHeader from "@/components/BookingHeader/BookingHeader";
+import BookSection from "@/components/BookSection /BookSection";
 import { useGetHotelInfo, useGetRoomPriceInfo } from "@/hooks/useHotel";
 import { TextParagraph } from "@/components/Text/Text";
 
-function RoomPriceEdit() {
+
+function Reservation() {
   const { data: HotelInfo, isLoading, isError, error } = useGetHotelInfo();
 
   const {
@@ -47,13 +48,12 @@ function RoomPriceEdit() {
       </Flex>
     );
   }
-
   return (
-    <Flex gap="2em" p="8em 0" minHeight="100vh" width="100%" direction="column">
-      <AdminHeader name={HotelInfo?.data?.name} />
-      <RoomPrice roomPriceInfo={roomPriceInfo?.data?.roomsList} />
+    <Flex gap="2em" minHeight="100vh" width="100%" direction="column">
+      <BookingHeader name={HotelInfo?.data?.name} />
+      <BookSection roomPriceInfo={roomPriceInfo?.data} />
     </Flex>
   );
 }
 
-export default RoomPriceEdit;
+export default Reservation;

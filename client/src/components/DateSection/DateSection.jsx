@@ -7,10 +7,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function DateSection() {
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
-
+function DateSection({ startDate, endDate, setStartDate, setEndDate }) {
   const onChange = (dates) => {
     const [start, end] = dates;
     setStartDate(start);
@@ -19,7 +16,14 @@ function DateSection() {
 
   return (
     <DateSectionStyled>
-      <Flex p="2em" gap="2em" bg="#DBD5CD" jc="center" ai="center" width="100%">
+      <Flex
+        p="1.5em"
+        gap="2em"
+        bg="#DBD5CD"
+        jc="center"
+        ai="center"
+        width="100%"
+      >
         <Flex
           jc="center"
           ai="center"

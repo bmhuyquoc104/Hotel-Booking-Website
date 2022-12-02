@@ -64,6 +64,22 @@ export default function RoomPriceArray({ control, register, errors }) {
                     type="text"
                   />
                 </Flex>
+                <Flex gap="0.5em" direction="column" width="260px">
+                  <Label
+                    color="var(--text_color)"
+                    fs="0.875rem"
+                    htmlFor="roomInStock"
+                    fw="700"
+                    text="Available Rooms"
+                  />
+                  <input
+                    {...register(`roomsList.${index}.roomInStock`, {
+                      valueAsNumber: true,
+                    })}
+                    id="roomInStock"
+                    type="text"
+                  />
+                </Flex>
                 <RoomPriceDateArray
                   nestIndex={index}
                   {...{ control, register, errors }}
@@ -95,7 +111,13 @@ export default function RoomPriceArray({ control, register, errors }) {
         m="0 0 1em 0"
         color="white"
         onClick={() => {
-          append({ id: "", name: "", defaultPrice: "", discounts: [] });
+          append({
+            id: "",
+            name: "",
+            defaultPrice: "",
+            roomInStock: "",
+            discounts: [],
+          });
         }}
       >
         Add new discount
