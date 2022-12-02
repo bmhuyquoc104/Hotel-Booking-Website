@@ -1,5 +1,10 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { getHotelInfo, postHotelInfo, getRoomPriceInfo, postRoomPriceInfo } from "@/api/api";
+import {
+  getHotelInfo,
+  postHotelInfo,
+  getRoomPriceInfo,
+  postRoomPriceInfo,
+} from "@/api/api";
 
 const useGetHotelInfo = () =>
   useQuery({
@@ -7,31 +12,42 @@ const useGetHotelInfo = () =>
     queryFn: () => getHotelInfo(),
   });
 
-  const useGetRoomPriceInfo = () =>
+const useGetRoomPriceInfo = () =>
   useQuery({
     queryKey: ["roomPrice-info"],
     queryFn: () => getRoomPriceInfo(),
   });
-
-  const usePostHotelInfo = () =>
-  useMutation({
+const usePostHotelInfo = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
     mutationFn: (order) => postHotelInfo(order),
     onError: (error) => {
-      console.log(`Error${error}`)
+      console.log(`Error${error}`);
     },
     onSuccess: (data) => {
-      console.log(data)
+      queryClient.invalidateQueries();
+      console.log(data);
     },
-  })
+  });
+};
 
-  const usePostRoomPriceInfo = () =>
-  useMutation({
+const usePostRoomPriceInfo = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
     mutationFn: (order) => postRoomPriceInfo(order),
     onError: (error) => {
-      console.log(`Error${error}`)
+      console.log(`Error${error}`);
     },
     onSuccess: (data) => {
-      console.log(data)
+      queryClient.invalidateQueries();
+      console.log(data);
     },
-  })
-export { useGetHotelInfo, usePostHotelInfo,useGetRoomPriceInfo,usePostRoomPriceInfo };
+  });
+};
+
+export {
+  useGetHotelInfo,
+  usePostHotelInfo,
+  useGetRoomPriceInfo,
+  usePostRoomPriceInfo,
+};
