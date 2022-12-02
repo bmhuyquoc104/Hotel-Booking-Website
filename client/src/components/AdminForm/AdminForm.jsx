@@ -4,17 +4,14 @@ import { TextHeading2 } from "@/components/Text/Text";
 import Label from "@/components/Label/Label";
 import Button from "@/components/Button/Button";
 import FieldArray from "../FieldArray/FieldArray";
-import { useQueryClient } from "@tanstack/react-query";
 import "react-datepicker/dist/react-datepicker.css";
 import { useForm, useFieldArray } from "react-hook-form";
 import RoomFieldArray from "@/components/RoomFieldArray/RoomFieldArray";
-import { useAddOrder } from "@/hooks/useHotel";
+import { usePostHotelInfo } from "@/hooks/useHotel";
 
 import AdminFormStyled from "./AdminForm.styled";
 function AdminForm({ hotelData }) {
-  const queryClient = useQueryClient();
-  const {mutate} = useAddOrder();
-  // const hotelData = queryClient.getQueryData(["hotel-info"]);
+  const {mutate} = usePostHotelInfo();
   const formDefaultValue = {
     name: hotelData?.data.name,
     address: hotelData?.data.address,

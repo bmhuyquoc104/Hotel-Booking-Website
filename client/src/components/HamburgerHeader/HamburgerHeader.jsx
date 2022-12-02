@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import HamburgerHeaderStyled from "./HamburgerHeader.styled";
 import Flex from "@/components/containers/Flex/Flex";
 import { TextParagraph } from "@/components/Text/Text";
@@ -6,31 +6,34 @@ import { DropDownAnimation } from "../../styles/AnimationStyled";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoLocation } from "react-icons/io5";
 import { Link, animateScroll as scroll } from "react-scroll";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { AbsoluteFlexContainer } from "../containers/Flex/AbsoluteFlexContainer";
 import { AiOutlineClose } from "react-icons/ai";
 
-
 function HamburgerHeader({ phone, address, setIsHamburgerToggle }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [toggleMap, setToggleMap] = useState(false);
 
   return (
-    
     <HamburgerHeaderStyled
       variants={DropDownAnimation}
       animate="show"
       initial="hidden"
       exit="exit"
     >
-        {toggleMap ? (
+      {toggleMap ? (
         <AbsoluteFlexContainer>
-          <Flex direction="column" gap ="1em">
-            <AiOutlineClose onClick = {() => setToggleMap(false)} style={{  color: "white",
+          <Flex direction="column" gap="1em">
+            <AiOutlineClose
+              onClick={() => setToggleMap(false)}
+              style={{
+                color: "white",
                 fontSize: "1.5rem",
                 backgroundColor: "black",
                 cursor: "pointer",
-                borderRadius:"3px"}} />
+                borderRadius: "3px",
+              }}
+            />
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.198599400034!2d109.2124277147515!3d12.029844438096031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31708b02a239a783%3A0x1307a2b6af9dcdf7!2sThe%20Princess%20of%20Arena%20Cam%20Ranh%20Home!5e0!3m2!1sen!2s!4v1669921134707!5m2!1sen!2s"
               width="370"
@@ -45,12 +48,12 @@ function HamburgerHeader({ phone, address, setIsHamburgerToggle }) {
           </Flex>
         </AbsoluteFlexContainer>
       ) : null}
-      <Flex cursor ="pointer" gap="0.5em">
+      <Flex cursor="pointer" gap="0.5em">
         <BsFillTelephoneFill />
-        <TextParagraph  color="inherit" text={phone} />
+        <TextParagraph color="inherit" text={phone} />
       </Flex>
       <div className="decoration2"></div>
-      <Flex cursor = "pointer" onClick = {() => setToggleMap(true)} gap="0.5em">
+      <Flex cursor="pointer" onClick={() => setToggleMap(true)} gap="0.5em">
         <IoLocation />
         <TextParagraph color="inherit" text={address} />
       </Flex>
@@ -100,7 +103,7 @@ function HamburgerHeader({ phone, address, setIsHamburgerToggle }) {
       </Link>{" "}
       <div className="decoration2"></div>
       <TextParagraph
-      cursor="pointer"
+        cursor="pointer"
         fw={500}
         needHover={true}
         color="inherit"

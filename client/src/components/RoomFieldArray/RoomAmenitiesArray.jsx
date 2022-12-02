@@ -6,7 +6,6 @@ import Button from "@/components/Button/Button";
 import {BsTrashFill} from "react-icons/bs"
 
 export default ({ nestIndex, control, register }) => {
-  console.log(nestIndex);
   const { fields, remove, append } = useFieldArray({
     control,
     name: `roomsList[${nestIndex}].amenities`,
@@ -37,8 +36,8 @@ export default ({ nestIndex, control, register }) => {
       <Flex gap="0.75em" wrap="wrap">
         {fields.map((item, k) => {
           return (
-            <Flex jc="space-between" ai="center">
-              <Flex ai ="center" width="max-content" gap="0.5em" key={item.id}>
+            <Flex key={item.id} jc="space-between" ai="center">
+              <Flex ai ="center" width="max-content" gap="0.5em" >
                 <input
                   {...register(`roomsList[${nestIndex}].amenities[${k}]`, {
                     required: true,

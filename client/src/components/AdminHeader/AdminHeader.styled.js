@@ -16,6 +16,10 @@ const AdminHeaderStyled = styled.header`
   & > h1 {
     margin-left:revert !important;
   }
+  @media (max-width:768px){
+    padding:1.5em;
+
+  }
 `;
 
 export default AdminHeaderStyled;
